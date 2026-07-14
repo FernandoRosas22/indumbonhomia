@@ -1,4 +1,4 @@
-# Muriel — Tienda de Moda Femenina (V1)
+# Bonhomía — Tienda de Moda Femenina (V1)
 
 Tienda online premium construida con React + TypeScript + Vite. Esta V1 incluye
 únicamente la parte pública del sitio, navegable de punta a punta con datos mock.

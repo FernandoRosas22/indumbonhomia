@@ -66,7 +66,7 @@ export default function Hero() {
       </div>
 
       <div className="pointer-events-none absolute -left-10 top-1/2 hidden -translate-y-1/2 -rotate-90 md:block">
-        <span className="eyebrow whitespace-nowrap">Muriel — Buenos Aires</span>
+        <span className="eyebrow whitespace-nowrap">Bonhomía — Buenos Aires</span>
       </div>
     </section>
   )

@@ -8,12 +8,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-20">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4 md:gap-8">
           <div className="col-span-2 md:col-span-1">
-            <span className="font-display text-2xl tracking-[0.08em] text-ink">MURIEL</span>
+            <span className="font-display text-2xl tracking-[0.08em] text-ink">BONHOMÍA</span>
             <p className="mt-4 max-w-[24ch] text-sm leading-relaxed text-stone">
               Moda femenina premium. Colecciones cápsula pensadas para durar.
             </p>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/indumbonhomia"
               target="_blank"
               rel="noreferrer"
               className="mt-5 inline-flex items-center gap-2 text-stone transition-colors hover:text-ink"
@@ -71,10 +71,10 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-line pt-6 sm:flex-row sm:items-center">
           <p className="text-[0.7rem] tracking-wide text-stone">
-            © {new Date().getFullYear()} Muriel. Todos los derechos reservados.
+            © {new Date().getFullYear()} Bonhomía. Todos los derechos reservados.
           </p>
           <a
-            href="https://instagram.com/fer.rosas22"
+            href="https://www.instagram.com/indumbonhomia"
             target="_blank"
             rel="noreferrer"
             className="link-underline text-[0.7rem] tracking-wide text-stone hover:text-ink"

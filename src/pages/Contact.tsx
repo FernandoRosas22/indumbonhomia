@@ -70,13 +70,13 @@ export default function Contact() {
           <p className="eyebrow mb-2">Showroom</p>
           <p className="mb-4 text-sm text-stone">Merlo, Buenos Aires. Visitas con cita previa.</p>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/indumbonhomia"
             target="_blank"
             rel="noreferrer"
             className="link-underline inline-flex items-center gap-1.5 text-sm text-ink"
           >
             <InstagramIcon size={14} strokeWidth={1.5} />
-            @muriel.style
+            @indumbonhomia
           </a>
         </motion.div>
       </div>

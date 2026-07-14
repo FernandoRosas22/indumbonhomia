@@ -17,20 +17,20 @@ export default function InstagramSection() {
       <div className="mb-12 flex flex-col items-center text-center">
         <p className="eyebrow mb-3">Síganos</p>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/indumbonhomia"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 font-display text-3xl text-ink hover:text-stone transition-colors"
         >
           <InstagramIcon size={22} strokeWidth={1.5} />
-          @muriel.style
+          @indumbonhomia
         </a>
       </div>
       <div className="grid grid-cols-3 gap-2 sm:gap-3 md:grid-cols-6">
         {tiles.map((tile, i) => (
           <motion.a
             key={i}
-            href="https://instagram.com"
+            href="https://www.instagram.com/indumbonhomia"
             target="_blank"
             rel="noreferrer"
             initial={{ opacity: 0 }}

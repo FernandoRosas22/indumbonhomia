@@ -65,7 +65,7 @@ export default function Header() {
           to="/"
           className="font-display text-xl tracking-[0.08em] text-ink sm:text-2xl absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
         >
-          MURIEL
+          BONHOMÍA
         </Link>
 
         <button
@@ -92,7 +92,7 @@ export default function Header() {
             className="fixed inset-0 z-50 bg-ivory md:hidden"
           >
             <div className="flex items-center justify-between px-5 py-4">
-              <span className="font-display text-xl tracking-[0.08em] text-ink">MURIEL</span>
+              <span className="font-display text-xl tracking-[0.08em] text-ink">BONHOMÍA</span>
               <button onClick={() => setMenuOpen(false)} aria-label="Cerrar menú" className="p-1">
                 <X size={20} strokeWidth={1.5} />
               </button>
