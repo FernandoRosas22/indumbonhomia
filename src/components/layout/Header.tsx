@@ -31,13 +31,15 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 transition-all duration-500 ${
-        scrolled ? 'bg-ivory/90 backdrop-blur-md border-b border-line shadow-[0_1px_0_0_rgba(27,24,21,0.02)]' : 'bg-ivory border-b border-transparent'
+      className={`sticky top-0 z-40 border-b transition-colors duration-500 ${
+        scrolled ? 'border-line' : 'border-transparent'
       }`}
     >
       <div
         className={`mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 transition-all duration-500 ${
-          scrolled ? 'py-3.5' : 'py-5 md:py-7'
+          scrolled
+            ? 'bg-ivory/90 py-3.5 shadow-[0_1px_0_0_rgba(27,24,21,0.02)] backdrop-blur-md'
+            : 'bg-ivory py-5 md:py-7'
         }`}
       >
         <button
