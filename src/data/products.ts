@@ -9,13 +9,16 @@ const palette = {
   gris: { name: 'Gris', hex: '#9B9B93' },
   natural: { name: 'Natural', hex: '#E8DFD1' },
   beige: { name: 'Beige', hex: '#C9B79C' },
+  azul: { name: 'Azul', hex: '#1B3A6B' },
+  ciruela: { name: 'Ciruela', hex: '#7A2452' },
 }
 
 // Catálogo real de Bonhomía (https://bonhomiaindum.mitiendanegocio.com/).
 // Nota: la tienda de referencia no tiene productos de la categoría "pantalones" al
 // momento del relevamiento, por eso esa categoría queda sin ítems (el listado ya
-// contempla el caso vacío). Las imágenes siguen usando el sistema de placeholders
-// ilustrados existente (categoria-numero), no se agregaron fotos reales.
+// contempla el caso vacío). Para la mayoría de los productos se usa el sistema de
+// placeholders ilustrados existente (categoria-numero); los productos con foto real
+// provista por el local (ruta que empieza con "/products/...") muestran esa foto.
 export const products: Product[] = [
   {
     id: 'p1',
@@ -61,9 +64,9 @@ export const products: Product[] = [
     price: 35000,
     category: 'vestidos',
     description: 'Vestido de encaje con short interior de lycra debajo de la pollera.',
-    images: ['vestidos-1', 'vestidos-3'],
+    images: ['/products/vestido-de-encaje.jpg'],
     sizes: ['Único'],
-    colors: [palette.natural],
+    colors: [palette.ciruela],
   },
   {
     id: 'p5',
@@ -252,15 +255,26 @@ export const products: Product[] = [
     colors: [palette.blanco],
   },
   {
+    id: 'p22',
+    slug: 'camiseta-argentina-retro-1986',
+    name: 'Camiseta Argentina Retro 1986',
+    price: 40000,
+    category: 'remeras',
+    description: 'Camiseta retro de la selección Argentina, edición 1986.',
+    images: ['/products/camiseta-argentina-retro-1986.jpg'],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [palette.azul],
+  },
+  {
     id: 'p21',
     slug: 'botas-cana-arrugada',
     name: 'Botas Caña Arrugada',
     price: 60000,
     category: 'accesorios',
     description: 'Botas de caña arrugada, disponibles en talles del 36 al 39.',
-    images: ['accesorios-1', 'accesorios-3'],
+    images: ['/products/botas-cana-arrugada.jpg'],
     sizes: ['36', '37', '38', '39'],
-    colors: [palette.natural],
+    colors: [palette.negro],
   },
 ]
 

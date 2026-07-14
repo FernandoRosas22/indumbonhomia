@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import type { Product } from '@/types/product'
 import { formatPrice } from '@/lib/whatsapp'
-import { parseImageId } from '@/lib/image'
-import PlaceholderArt from './PlaceholderArt'
+import ProductImage from './ProductImage'
 
 interface ProductCardProps {
   product: Product
@@ -11,8 +10,8 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, index = 0 }: ProductCardProps) {
-  const primary = parseImageId(product.images[0])
-  const secondary = parseImageId(product.images[1] ?? product.images[0])
+  const primaryId = product.images[0]
+  const secondaryId = product.images[1] ?? product.images[0]
 
   return (
     <motion.div
@@ -23,17 +22,13 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
     >
       <Link to={`/producto/${product.slug}`} className="group block">
         <div className="relative aspect-[4/5] overflow-hidden bg-porcelain">
-          <PlaceholderArt
-            variant={primary.variant}
-            tone={primary.tone}
-            seed={primary.seed}
+          <ProductImage
+            imageId={primaryId}
             label={product.name}
             className="img-zoom absolute inset-0 h-full w-full transition-opacity duration-700 group-hover:opacity-0"
           />
-          <PlaceholderArt
-            variant={secondary.variant}
-            tone={secondary.tone}
-            seed={secondary.seed}
+          <ProductImage
+            imageId={secondaryId}
             label={product.name}
             className="img-zoom absolute inset-0 h-full w-full opacity-0 transition-opacity duration-700 group-hover:opacity-100"
           />

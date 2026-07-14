@@ -4,8 +4,7 @@ import { motion } from 'framer-motion'
 import { ShoppingBag, MessageCircle } from 'lucide-react'
 import { getProductBySlug } from '@/data/products'
 import { formatPrice, buildWhatsAppUrl, buildSingleProductMessage } from '@/lib/whatsapp'
-import { parseImageId } from '@/lib/image'
-import PlaceholderArt from '@/components/ui/PlaceholderArt'
+import ProductImage from '@/components/ui/ProductImage'
 import Button from '@/components/ui/Button'
 import { useCart } from '@/context/CartContext'
 
@@ -22,7 +21,6 @@ export default function Product() {
 
   if (!product) return <Navigate to="/404" replace />
 
-  const img = parseImageId(product.images[activeImage])
   const canSubmit = Boolean(size && color)
 
   const handleAddToCart = () => {
@@ -58,36 +56,26 @@ export default function Product() {
             transition={{ duration: 0.4 }}
             className="aspect-[4/5] w-full overflow-hidden bg-porcelain"
           >
-            <PlaceholderArt
-              variant={img.variant}
-              tone={img.tone}
-              seed={img.seed}
+            <ProductImage
+              imageId={product.images[activeImage]}
               label={product.name}
               className="h-full w-full"
             />
           </motion.div>
           {product.images.length > 1 && (
             <div className="mt-4 flex gap-3">
-              {product.images.map((image, i) => {
-                const thumb = parseImageId(image)
-                return (
-                  <button
-                    key={i}
-                    onClick={() => setActiveImage(i)}
-                    className={`h-20 w-16 shrink-0 overflow-hidden border transition-colors ${
-                      activeImage === i ? 'border-ink' : 'border-transparent'
-                    }`}
-                    aria-label={`Ver imagen ${i + 1}`}
-                  >
-                    <PlaceholderArt
-                      variant={thumb.variant}
-                      tone={thumb.tone}
-                      seed={thumb.seed}
-                      className="h-full w-full"
-                    />
-                  </button>
-                )
-              })}
+              {product.images.map((image, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveImage(i)}
+                  className={`h-20 w-16 shrink-0 overflow-hidden border transition-colors ${
+                    activeImage === i ? 'border-ink' : 'border-transparent'
+                  }`}
+                  aria-label={`Ver imagen ${i + 1}`}
+                >
+                  <ProductImage imageId={image} className="h-full w-full" />
+                </button>
+              ))}
             </div>
           )}
         </div>

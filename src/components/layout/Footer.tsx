@@ -46,7 +46,7 @@ export default function Footer() {
           <div className="md:col-span-3">
             <p className="eyebrow mb-5">Atención</p>
             <ul className="space-y-3.5 text-sm text-stone">
-              <li>Merlo, Buenos Aires</li>
+              <li>Florencio Varela, Buenos Aires</li>
               <li>Lun a Vie, 10 a 18 hs</li>
               <li>
                 <Link to="/contacto" className="link-underline text-stone hover:text-ink">

@@ -68,7 +68,7 @@ export default function Contact() {
         >
           <MapPin size={20} strokeWidth={1.5} className="mb-4 text-ink" />
           <p className="eyebrow mb-2">Showroom</p>
-          <p className="mb-4 text-sm text-stone">Merlo, Buenos Aires. Visitas con cita previa.</p>
+          <p className="mb-4 text-sm text-stone">Florencio Varela, Buenos Aires. Visitas con cita previa.</p>
           <a
             href="https://www.instagram.com/indumbonhomia"
             target="_blank"
