@@ -13,8 +13,14 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className={`${align === 'center' ? 'text-center' : 'text-left'} ${className}`}>
-      {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
-      <h2 className="text-3xl sm:text-4xl md:text-[2.75rem] leading-[1.1] text-ink">{title}</h2>
+      {eyebrow && (
+        <p className={`eyebrow mb-4 flex items-center gap-3 ${align === 'center' ? 'justify-center' : ''}`}>
+          <span className="h-px w-6 bg-stone-light" />
+          {eyebrow}
+          {align === 'center' && <span className="h-px w-6 bg-stone-light" />}
+        </p>
+      )}
+      <h2 className="text-[2rem] leading-[1.08] text-ink sm:text-4xl md:text-[3rem]">{title}</h2>
     </div>
   )
 }

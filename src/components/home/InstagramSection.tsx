@@ -13,7 +13,7 @@ const tiles: Array<{ variant: 'vestidos' | 'remeras' | 'pantalones' | 'abrigos' 
 
 export default function InstagramSection() {
   return (
-    <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28">
+    <section className="section-space mx-auto max-w-7xl px-5 sm:px-8">
       <div className="mb-12 flex flex-col items-center text-center">
         <p className="eyebrow mb-3">Síganos</p>
         <a

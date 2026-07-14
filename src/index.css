@@ -17,6 +17,9 @@
 
   /* Custom letter spacing */
   --tracking-widest-eyebrow: 0.22em;
+
+  /* Signature accent — muted clay, used sparingly for premium warmth */
+  --color-clay: #B08968;
 }
 
 @layer base {
@@ -96,6 +99,26 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  /* Consistent vertical rhythm between sections across the site */
+  .section-space {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+  @media (min-width: 768px) {
+    .section-space {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+  }
+
+  /* Shared image zoom used on cards, categories and the hero */
+  .img-zoom {
+    transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .group:hover .img-zoom {
+    transform: scale(1.045);
   }
 }
 

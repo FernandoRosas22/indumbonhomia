@@ -6,9 +6,9 @@ import SectionHeading from '@/components/ui/SectionHeading'
 
 export default function Categories() {
   return (
-    <section className="bg-porcelain/50 py-20 md:py-28">
+    <section className="section-space bg-porcelain/50">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHeading eyebrow="Explorar" title="Categorías" align="center" className="mb-12" />
+        <SectionHeading eyebrow="Explorar" title="Categorías" align="center" className="mb-14 md:mb-16" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-5 md:gap-5">
           {categories.map((cat, i) => (
             <motion.div
@@ -25,10 +25,11 @@ export default function Categories() {
                     tone={i % 2 === 0 ? 'sand' : 'ivory'}
                     seed={i}
                     label={cat.name}
-                    className="h-full w-full transition-transform duration-700 group-hover:scale-105"
+                    className="img-zoom h-full w-full"
                   />
-                  <div className="absolute inset-0 flex items-end justify-center pb-5">
-                    <span className="bg-ivory/90 px-4 py-1.5 font-display text-sm text-ink">
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/12 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="absolute inset-x-0 bottom-5 flex justify-center">
+                    <span className="link-underline font-display text-sm tracking-wide text-ink">
                       {cat.name}
                     </span>
                   </div>

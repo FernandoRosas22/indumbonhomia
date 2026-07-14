@@ -7,7 +7,7 @@ export default function NewCollection() {
   const items = getNewProducts(4)
 
   return (
-    <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28">
+    <section className="section-space mx-auto max-w-7xl px-5 sm:px-8">
       <div className="mb-12 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
         <SectionHeading eyebrow="Recién llegado" title="Nueva colección" />
         <Link
