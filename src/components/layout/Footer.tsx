@@ -57,15 +57,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-line pt-7 text-[0.68rem] tracking-[0.08em] text-stone sm:flex-row sm:items-center md:mt-20">
+        <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-line pt-7 text-[0.68rem] tracking-[0.08em] text-stone sm:flex-row sm:items-center md:mt-20">
           <p>© {new Date().getFullYear()} Bonhomía. Todos los derechos reservados.</p>
           <a
-            href="https://www.instagram.com/indumbonhomia"
+            href="https://instagram.com/fer.rosas22"
             target="_blank"
             rel="noreferrer"
-            className="link-underline hover:text-ink"
+            className="link-underline inline-flex items-center gap-2 text-[0.7rem] tracking-[0.1em] text-stone hover:text-ink"
           >
-            Sitio por @fer.rosas22
+            <span className="text-stone-light">Sitio diseñado por</span>
+            <span className="font-display text-[0.85rem] tracking-[0.04em] text-ink">
+              Fer Rosas
+            </span>
           </a>
         </div>
       </div>
