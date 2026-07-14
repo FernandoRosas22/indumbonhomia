@@ -54,8 +54,8 @@ export default function Contact() {
           <Mail size={20} strokeWidth={1.5} className="mb-4 text-ink" />
           <p className="eyebrow mb-2">Email</p>
           <p className="mb-4 text-sm text-stone">Para consultas mayoristas o prensa.</p>
-          <a href="mailto:hola@muriel.com.ar" className="link-underline text-sm text-ink">
-            hola@muriel.com.ar
+          <a href="mailto:hola@indumbonhomia.com" className="link-underline text-sm text-ink">
+            hola@indumbonhomia.com
           </a>
         </motion.div>
 

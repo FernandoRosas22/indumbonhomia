@@ -123,6 +123,7 @@ export default function Product() {
                 <button
                   key={s}
                   onClick={() => setSize(s)}
+                  aria-pressed={size === s}
                   className={`min-w-11 border px-3 py-2 text-sm transition-colors ${
                     size === s
                       ? 'border-ink bg-ink text-ivory'
@@ -144,8 +145,9 @@ export default function Product() {
                   key={c.name}
                   onClick={() => setColor(c.name)}
                   aria-label={c.name}
-                  className={`h-9 w-9 rounded-full border transition-all ${
-                    color === c.name ? 'ring-2 ring-ink ring-offset-2 ring-offset-ivory' : 'border-line'
+                  aria-pressed={color === c.name}
+                  className={`h-9 w-9 rounded-full border border-line/60 ring-offset-2 ring-offset-ivory transition-all ${
+                    color === c.name ? 'ring-2 ring-ink' : 'hover:ring-1 hover:ring-stone-light'
                   }`}
                   style={{ backgroundColor: c.hex }}
                 />

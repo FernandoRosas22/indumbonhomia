@@ -38,6 +38,7 @@ export default function Shop() {
       <div className="no-scrollbar mb-10 flex gap-3 overflow-x-auto pb-1 md:mb-14 md:flex-wrap">
         <button
           onClick={() => setCategory(null)}
+          aria-pressed={!activeCategory}
           className={`shrink-0 border px-4 py-2 text-[0.68rem] tracking-[0.16em] uppercase transition-colors ${
             !activeCategory
               ? 'border-ink bg-ink text-ivory'
@@ -50,6 +51,7 @@ export default function Shop() {
           <button
             key={cat.slug}
             onClick={() => setCategory(cat.slug)}
+            aria-pressed={activeCategory === cat.slug}
             className={`shrink-0 border px-4 py-2 text-[0.68rem] tracking-[0.16em] uppercase transition-colors ${
               activeCategory === cat.slug
                 ? 'border-ink bg-ink text-ivory'

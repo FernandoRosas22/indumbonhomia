@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 import PlaceholderArt from '@/components/ui/PlaceholderArt'
 
 export default function PromoBanner() {
@@ -46,9 +47,10 @@ export default function PromoBanner() {
         >
           <Link
             to="/tienda"
-            className="link-underline text-[0.75rem] tracking-[0.18em] uppercase text-ivory"
+            className="group inline-flex items-center gap-3 bg-ivory px-8 py-4 text-[0.72rem] tracking-[0.2em] uppercase text-ink transition-all duration-300 hover:gap-4"
           >
-            Comprar ahora →
+            Comprar ahora
+            <ArrowRight size={14} strokeWidth={1.5} className="transition-transform duration-300 group-hover:translate-x-0.5" />
           </Link>
         </motion.div>
       </div>

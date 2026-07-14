@@ -43,7 +43,7 @@ export default function InstagramSection() {
               variant={tile.variant}
               tone={i % 2 === 0 ? 'porcelain' : 'sand'}
               seed={tile.seed}
-              className="h-full w-full transition-transform duration-500 group-hover:scale-105"
+              className="img-zoom h-full w-full"
             />
           </motion.a>
         ))}
