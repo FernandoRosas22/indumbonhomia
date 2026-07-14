@@ -57,17 +57,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-line pt-7 text-[0.68rem] tracking-[0.08em] text-stone sm:flex-row sm:items-center md:mt-20">
-          <p>© {new Date().getFullYear()} Bonhomía. Todos los derechos reservados.</p>
+        <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-line pt-7 sm:flex-row sm:items-end md:mt-20">
+          <p className="text-[0.68rem] tracking-[0.08em] text-stone">
+            © {new Date().getFullYear()} Bonhomía. Todos los derechos reservados.
+          </p>
           <a
             href="https://instagram.com/fer.rosas22"
             target="_blank"
             rel="noreferrer"
-            className="link-underline inline-flex items-center gap-2 text-[0.7rem] tracking-[0.1em] text-stone hover:text-ink"
+            className="group flex flex-col items-start gap-1 text-right sm:items-end"
           >
-            <span className="text-stone-light">Sitio diseñado por</span>
-            <span className="font-display text-[0.85rem] tracking-[0.04em] text-ink">
-              Fer Rosas
+            <span className="link-underline inline-flex items-center gap-2 text-[0.7rem] tracking-[0.1em] text-stone">
+              <span>Sitio diseñado por</span>
+              <span className="font-display text-[0.85rem] tracking-[0.04em] text-ink">
+                Fer Rosas
+              </span>
+            </span>
+            <span className="text-[0.66rem] italic tracking-[0.03em] text-stone-light transition-colors group-hover:text-stone">
+              ¿Necesitás un sitio así para tu marca? Escribime.
             </span>
           </a>
         </div>
